@@ -1,4 +1,4 @@
-const BASE = "corriere-espresso-production.up.railway.app";
+const BASE = "https://corriere-espresso-production.up.railway.app";
 
 function getToken() {
   return sessionStorage.getItem("token") || "";
