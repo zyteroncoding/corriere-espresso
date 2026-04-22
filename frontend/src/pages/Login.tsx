@@ -46,7 +46,7 @@ export default function Login({ navigate }: Props) {
             <input
               className="form-input"
               type="email"
-              placeholder="admin@corriere.it"
+              placeholder="blablabla@corriere.it"
               value={email}
               onChange={e => setEmail(e.target.value)}
               onKeyDown={handleKey}
