@@ -1,7 +1,10 @@
 import { Router, Response } from 'express';
 import pool from '../db';
 import { verificaToken, AuthRequest } from '../middleware/auth';
-import { v4 as uuidv4 } from 'uuid';
+
+function generaChiave(): string {
+    return Math.random().toString(36).substring(2, 10).toUpperCase();
+}
 
 const router = Router();
 
@@ -57,7 +60,7 @@ router.post('/', verificaToken, async (req: AuthRequest, res: Response) => {
     }
 
     try {
-        const chiaveConsegna = uuidv4().substring(0, 8).toUpperCase();
+        const chiaveConsegna = generaChiave();
 
         const [result]: any = await pool.query(
             'INSERT INTO Consegna (ClienteID, DataRitiro, Stato, ChiaveConsegna) VALUES (?, ?, ?, ?)',
