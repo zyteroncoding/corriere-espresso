@@ -1,4 +1,4 @@
-const BASE = "http://localhost:5000";
+const BASE = "corriere-espresso-production.up.railway.app";
 
 function getToken() {
   return sessionStorage.getItem("token") || "";
