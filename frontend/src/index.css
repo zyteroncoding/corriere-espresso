@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700;1,800&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@300;400;500&display=swap');
 
 :root {
   --bg: #0a0b0e;
@@ -33,7 +33,7 @@ html, body, #root {
   height: 100%;
   background: var(--bg);
   color: var(--text);
-  font-family: 'Syne', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 15px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -643,10 +643,12 @@ input, select, textarea { font-family: inherit; }
 .home-hero h1 {
   font-size: clamp(40px, 7vw, 80px);
   font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 1;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
   margin-bottom: 20px;
   color: var(--text);
+  font-family: 'Playfair Display', serif;
+  overflow: visible;
 }
 
 .home-hero h1 em {
@@ -678,32 +680,38 @@ input, select, textarea { font-family: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 32px;
-  padding: 20px 48px;
+  gap: 40px;
+  padding: 24px 48px;
   border-top: 1px solid var(--border);
   position: relative;
   z-index: 1;
 }
 
 .home-status-item {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
 }
 
-.home-status-item .val {
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--accent);
-  letter-spacing: -0.02em;
-  font-family: 'DM Mono', monospace;
+.home-status-item svg {
+  width: 32px;
+  height: 32px;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.home-status-item:hover svg {
+  opacity: 1;
 }
 
 .home-status-item .lbl {
-  font-size: 11px;
+  font-size: 10px;
   color: var(--text3);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
+  font-family: 'DM Mono', monospace;
 }
-
 /* ---- LOGIN PAGE ---- */
 .login-page {
   min-height: 100vh;

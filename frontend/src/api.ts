@@ -21,7 +21,7 @@
     const res = await fetch(`${BASE}${path}`, {
       method: "POST",
       headers: authHeaders(),
-      body: JSON.stringify(body),
+      body: JSON.stringify(body), 
     });
     if (!res.ok) throw new Error((await res.json()).errore || "Errore");
     return res.json();
